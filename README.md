@@ -1,6 +1,7 @@
 # goEncrypt
 
     go get gitlab.com/tovijaeschke/goEncrypt
+    cd $GOPATH/src/gitlab.com/tovijaeschke/goEncrypt/
     make
     sudo make install
 

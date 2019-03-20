@@ -35,6 +35,11 @@ func main() {
 		os.Exit(0)
 	}
 
+	if len(flag.Args()) != 1 {
+		fmt.Println(errors.New(fmt.Sprintf("Error: did not provide file to encrypt/decrypt")))
+		os.Exit(1)
+	}
+
 	for i := 0; i < len(flag.Args()); i++ {
 		if _, err := os.Stat(flag.Args()[i]); os.IsNotExist(err) {
 			fmt.Println(errors.New(fmt.Sprintf("Error: %s does not exist", flag.Args()[i])))
